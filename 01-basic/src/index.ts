@@ -31,10 +31,19 @@ const update = async () => {
   }
 };
 
+const deleteData = async () => {
+  await prisma.user.delete({
+    where: {
+      email: "baby@gmail.com",
+    },
+  });
+};
+
 const main = async () => {
   //   await create();
   //   await read();
-  await update();
+  //   await update();
+  //   await deleteData();
 };
 
 main()
