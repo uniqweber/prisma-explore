@@ -5,14 +5,20 @@ const prisma = new PrismaClient();
 const create = async () => {
   await prisma.user.create({
     data: {
-      name: "john",
-      email: "john.com",
+      name: "baby",
+      email: "baby.com",
     },
   });
 };
 
+const read = async () => {
+  const find = await prisma.user.findMany();
+  console.log(find);
+};
+
 const main = async () => {
   await create();
+  await read();
 };
 
 main()
