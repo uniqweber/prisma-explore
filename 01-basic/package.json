@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsx ./src/index.ts "
   },
   "keywords": [],
   "author": "",
@@ -17,5 +18,8 @@
   },
   "dependencies": {
     "@prisma/client": "^6.5.0"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
   }
 }
