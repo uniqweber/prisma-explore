@@ -16,9 +16,25 @@ const read = async () => {
   console.log(find);
 };
 
+const update = async () => {
+  try {
+    await prisma.user.update({
+      where: {
+        email: "baby.com",
+      },
+      data: {
+        email: "baby@gmail.com",
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const main = async () => {
-  await create();
-  await read();
+  //   await create();
+  //   await read();
+  await update();
 };
 
 main()
